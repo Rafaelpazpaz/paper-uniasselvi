@@ -1,6 +1,9 @@
+// C:\Users\rafae\OneDrive\Área de Trabalho\CURSO\Paper Uniasselvi\Novo projeto paper\controle-estoque-front\src\ProdutoService.js
+
 import axios from 'axios';
 
 class ProdutoService {
+  // Função para obter produtos
   static async obterProdutos() {
     try {
       const response = await axios.get('http://localhost:3050/produtos');
@@ -11,6 +14,7 @@ class ProdutoService {
     }
   }
 
+  // Função para adicionar um novo produto
   static async adicionarProduto(novoProduto) {
     try {
       const response = await axios.post('http://localhost:3050/produtos', novoProduto);
@@ -21,6 +25,7 @@ class ProdutoService {
     }
   }
 
+  // Função para remover um produto por ID
   static async removerProduto(id) {
     try {
       await axios.delete(`http://localhost:3050/produtos/${id}`);
@@ -30,6 +35,7 @@ class ProdutoService {
     }
   }
 
+  // Função para reduzir a quantidade de um produto por ID
   static async reduzirProduto(id) {
     try {
       const response = await axios.patch(`http://localhost:3050/produtos/${id}/reduzir`);

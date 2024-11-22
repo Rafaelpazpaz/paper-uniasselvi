@@ -1,3 +1,4 @@
+/* Reseta margens e aplica fonte padrão */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +6,127 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Imagem de fundo */
+  background-image: url('background.jpeg'); /* Certifique-se de que a imagem esteja em /public */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Estilo do contêiner principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.85); /* Fundo branco translúcido */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 10px;
+  margin: auto;
+  max-width: 800px; /* Define uma largura máxima */
+}
+
+/* Títulos principais */
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2, h3 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Estilo do formulário */
+form {
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaço entre os campos */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+form button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Listas */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: rgba(240, 240, 240, 0.9);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li strong {
+  color: #333;
+}
+
+li button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: #d32f2f;
+}
+
+/* Botões de quantidade */
+li button:first-of-type {
+  background-color: #4CAF50;
+}
+
+li button:first-of-type:hover {
+  background-color: #45a049;
+}
+
+/* Lista de compras */
+h2 + form {
+  margin-top: 20px;
 }
